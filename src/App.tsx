@@ -1,9 +1,8 @@
 function App() {
 
   return (
-    <div>
-      <h1>Hello world!</h1>
-      <p>This is the Text Editor</p>
+    <div className="min-h-screen text-zinc-900 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
+
     </div>
   )
 }
