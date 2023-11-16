@@ -10,6 +10,12 @@ function App() {
             <button className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-yellow-400" />
             <button className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-green-400" />
           </div>
+          <div className="flex mt-4 pl-2 bg-zinc-700 w-full h-[200px] rounded-md">
+            <h3 className="text-zinc-300 font-medium text-lg">Texto de resposta</h3>
+            <div>
+
+            </div>
+          </div>
         </aside>
         <main className="p-4">
           <Editor />
