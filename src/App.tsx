@@ -1,6 +1,10 @@
-import { Editor } from "./components/Editor"
+import { useCurrentEditor } from "@tiptap/react"
+import EditorProvider from "./components/Editor"
 
 function App() {
+  const { editor } = useCurrentEditor()
+  console.log(editor?.getHTML());
+
   return (
     <div className="min-h-screen p-8  text-zinc-900 dark:text-zinc-50 dark:bg-zinc-50 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
       <div className="bg-white dark:bg-zinc-800 w-[1110px] mx-auto rounded-xl min-h-[720px] shadow-sm border-black/20 overflow-hidden grid grid-cols-[16rem_1fr]">
@@ -13,12 +17,11 @@ function App() {
           <div className="flex mt-4 pl-2 bg-zinc-700 w-full h-[200px] rounded-md">
             <h3 className="text-zinc-300 font-medium text-lg">Texto de resposta</h3>
             <div>
-
             </div>
           </div>
         </aside>
         <main className="p-4">
-          <Editor />
+          <EditorProvider />
         </main>
       </div>
     </div>
