@@ -1,4 +1,4 @@
-import { useEditor, EditorContent, EditorProvider, BubbleMenu, FloatingMenu, useCurrentEditor } from '@tiptap/react'
+import { EditorContent, EditorProvider, BubbleMenu, FloatingMenu, useCurrentEditor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight'
 import { initialContent } from '../utils/initialContent'
@@ -14,6 +14,8 @@ lowlight.register({ html })
 
 function Editor() {
   const { editor } = useCurrentEditor()
+  console.log(editor?.getHTML());
+
   return (
     <EditorContent
       className="max-w-[700px] mx-auto pt-16 prose prose-invert prose-violet"
@@ -128,11 +130,11 @@ export default () => {
         },
       }}
     >
-      <form action="">
+      {/* <form action="">
         <input type="text" />
         <input type="text" />
         <input type="text" />
-      </form>
+      </form> */}
     </EditorProvider>
   )
 }
